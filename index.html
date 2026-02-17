@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rhine Rental Car</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Poppins',sans-serif;background:#eef2f7;}
+    .hero{background:linear-gradient(135deg,#111827,#374151);color:#fff;padding:50px 20px 70px;text-align:center;}
+    .logo{font-size:34px;font-weight:600;letter-spacing:2px;}
+    .sub{margin-top:8px;opacity:.8;font-size:14px;}
+    .card{max-width:750px;margin:-40px auto 40px;background:#fff;border-radius:16px;padding:30px;box-shadow:0 20px 40px rgba(0,0,0,.08);}
+    h2{text-align:center;margin-top:0;}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+    .full{grid-column:1/-1}
+    label{font-size:13px;font-weight:500;display:block;margin-bottom:5px;}
+    input,select,textarea{width:100%;padding:11px;border:1px solid #d1d5db;border-radius:8px;}
+    textarea{resize:none}
+    .btn{margin-top:20px;width:100%;padding:14px;border:none;border-radius:10px;font-size:16px;background:#111827;color:#fff;font-weight:600;cursor:pointer;}
+    footer{text-align:center;font-size:13px;color:#6b7280;margin-bottom:25px;}
+    @media(max-width:700px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="logo">RHINE RENTAL CAR</div>
+  <div class="sub">Amman – Jordan</div>
+</div>
+
+<div class="card">
+  <h2>Car Rental Request</h2>
+
+  <form action="https://formsubmit.co/rhineriver906@gmail.com" method="POST">
+    
+    <div class="grid">
+      <div>
+        <label>Full Name</label>
+        <input type="text" name="Full Name" required>
+      </div>
+      <div>
+        <label>Phone Number</label>
+        <input type="tel" name="Phone Number" required>
+      </div>
+      <div>
+        <label>Email</label>
+        <input type="email" name="Customer Email" required>
+      </div>
+      <div>
+        <label>Car Type</label>
+        <select name="Car Type">
+          <option>Sedan</option>
+          <option>SUV</option>
+          <option>Economy</option>
+          <option>Luxury</option>
+        </select>
+      </div>
+      <div>
+        <label>Arrival</label>
+        <input type="datetime-local" name="Arrival Date">
+      </div>
+      <div>
+        <label>Departure</label>
+        <input type="datetime-local" name="Departure Date">
+      </div>
+      <div class="full">
+        <label>Notes</label>
+        <textarea rows="3" name="Notes"></textarea>
+      </div>
+    </div>
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Car Rental Request - Rhine Rental">
+
+    <button type="submit" class="btn">Send Request</button>
+
+  </form>
+</div>
+
+<footer>Rhine Rental Car © All Rights Reserved</footer>
+
+</body>
+</html>
