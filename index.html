@@ -1,89 +1,233 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rhine Rental Car</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    *{box-sizing:border-box}
-    body{margin:0;font-family:'Poppins',sans-serif;background:#eef2f7;}
-    .hero{background:linear-gradient(135deg,#111827,#374151);color:#fff;padding:50px 20px 70px;text-align:center;}
-    .logo{font-size:34px;font-weight:600;letter-spacing:2px;}
-    .sub{margin-top:8px;opacity:.8;font-size:14px;}
-    .card{max-width:750px;margin:-40px auto 40px;background:#fff;border-radius:16px;padding:30px;box-shadow:0 20px 40px rgba(0,0,0,.08);}
-    h2{text-align:center;margin-top:0;}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-    .full{grid-column:1/-1}
-    label{font-size:13px;font-weight:500;display:block;margin-bottom:5px;}
-    input,select,textarea{width:100%;padding:11px;border:1px solid #d1d5db;border-radius:8px;}
-    textarea{resize:none}
-    .btn{margin-top:20px;width:100%;padding:14px;border:none;border-radius:10px;font-size:16px;background:#111827;color:#fff;font-weight:600;cursor:pointer;}
-    footer{text-align:center;font-size:13px;color:#6b7280;margin-bottom:25px;}
-    @media(max-width:700px){.grid{grid-template-columns:1fr}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rhine Rental</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#f4f6fb;
+}
+
+header{
+background:#111827;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+}
+
+.logo{
+font-size:22px;
+font-weight:600;
+letter-spacing:2px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:15px;
+}
+
+.hero{
+background:linear-gradient(135deg,#111827,#374151);
+color:white;
+text-align:center;
+padding:80px 20px 120px 20px;
+}
+
+.hero h1{
+margin:0;
+font-size:38px;
+}
+
+.booking{
+background:white;
+max-width:900px;
+margin:-60px auto 60px auto;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+}
+
+.booking input, .booking select{
+padding:10px;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+.booking button{
+background:#111827;
+color:white;
+border:none;
+padding:10px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.section{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.fleet{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.car{
+background:white;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.car img{
+width:100%;
+height:190px;
+object-fit:cover;
+}
+
+.car-body{
+padding:18px;
+text-align:center;
+}
+
+.price{
+font-weight:600;
+}
+
+footer{
+text-align:center;
+font-size:13px;
+color:#6b7280;
+margin:50px 0;
+}
+
+</style>
 </head>
+
 <body>
 
-<div class="hero">
-  <div class="logo">RHINE RENTAL CAR</div>
-  <div class="sub">Amman – Jordan</div>
+<header>
+<div class="logo">RHINE RENTAL</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#fleet">Our Fleet</a>
+<a href="#about">About Us</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+
+<section class="hero">
+<h1>Rent Your Car in Amman</h1>
+<p>Affordable and Reliable Car Rental Service</p>
+</section>
+
+
+<div class="booking">
+<input type="text" placeholder="Pick-up Location">
+<input type="date">
+<input type="date">
+
+<select>
+<option>Economy</option>
+<option>Sedan</option>
+<option>SUV</option>
+<option>Luxury</option>
+</select>
+
+<button>Send Request</button>
 </div>
 
-<div class="card">
-  <h2>Car Rental Request</h2>
 
-  <form action=https://formspree.io/f/mjgeobva
-    method="post"
-    
-    
-    <div class="grid">
-      <div>
-        <label>Full Name</label>
-        <input type="text" name="Full Name" required>
-      </div>
-      <div>
-        <label>Phone Number</label>
-        <input type="tel" name="Phone Number" required>
-      </div>
-      <div>
-        <label>Email</label>
-        <input type="email" name="Customer Email" required>
-      </div>
-      <div>
-        <label>Car Type</label>
-        <select name="Car Type">
-          <option>Sedan</option>
-          <option>SUV</option>
-          <option>Economy</option>
-          <option>Luxury</option>
-        </select>
-      </div>
-      <div>
-        <label>Arrival</label>
-        <input type="datetime-local" name="Arrival Date">
-      </div>
-      <div>
-        <label>Departure</label>
-        <input type="datetime-local" name="Departure Date">
-      </div>
-      <div class="full">
-        <label>Notes</label>
-        <textarea rows="3" name="Notes"></textarea>
-      </div>
-    </div>
+<section class="section" id="fleet">
 
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="New Car Rental Request - Rhine Rental">
+<h2>Our Fleet</h2>
 
-    <button type="submit" class="btn">Send Request</button>
+<div class="fleet">
 
-  </form>
+<div class="car">
+<img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=1200&q=60">
+<div class="car-body">
+<h3>Economy</h3>
+<p class="price">From $35 / day</p>
+</div>
 </div>
 
-  
-<footer>Rhine Rental Car © All Rights Reserved</footer>
+<div class="car">
+<img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=60">
+<div class="car-body">
+<h3>Sedan</h3>
+<p class="price">From $45 / day</p>
+</div>
+</div>
+
+<div class="car">
+<img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=60">
+<div class="car-body">
+<h3>SUV</h3>
+<p class="price">From $65 / day</p>
+</div>
+</div>
+
+<div class="car">
+<img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=1200&q=60">
+<div class="car-body">
+<h3>Luxury</h3>
+<p class="price">From $100 / day</p>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<section class="section" id="about">
+<h2>About Us</h2>
+
+<p style="text-align:center;max-width:800px;margin:auto">
+Rhine Rental is a professional car rental service in Amman, Jordan. 
+We provide reliable vehicles, affordable prices, and excellent customer service 
+for tourists and local clients.
+</p>
+
+</section>
+
+
+<section class="section" id="contact">
+<h2>Contact</h2>
+
+<p style="text-align:center">
+Email: rhineriver906@gmail.com<br>
+Location: Amman – Jordan
+</p>
+
+</section>
+
+
+<footer>
+Rhine Rental © All Rights Reserved
+</footer>
 
 </body>
 </html>
-
