@@ -139,32 +139,30 @@ margin:50px 0;
 
 
 <section class="hero">
-<h1>Rhine Rental – Car Rental in Jordan</h1>
-<p>Delivery available in Amman, Airport, Dead Sea and across Jordan.</p>
+<h1>Rent Your Car in Amman</h1>
+<p>Affordable and Reliable Car Rental Service</p>
 </section>
 
 
+<form class="booking" action="https://formspree.io/f/mjgeobva" method="POST">
 
-<select>
+<input type="text" name="pickup_location" placeholder="Pick-up Location" required>
+<input type="date" name="pickup_date" required>
+<input type="date" name="return_date" required>
+
+<select name="car_type">
 <option>Economy</option>
 <option>Sedan</option>
 <option>SUV</option>
 <option>Luxury</option>
 </select>
-<form class="booking" action="https://formspree.io/f/xpqylljd" method="POST">
 
-  <input type="text" name="location" placeholder="Pick-up Location">
+<input type="email" name="email" placeholder="Your Email" required>
 
-  <input type="date" name="pickup_date">
-  <input type="date" name="return_date">
-    <option>Economy</option>
-    <option>Sedan</option>
-    <option>SUV</option>
-    <option>Luxury</option>
-  </select>
+<button type="submit">Send Request</button>
 
-  <button type="submit">Send Request</button>
 </form>
+
 
 <section class="section" id="fleet">
 
@@ -175,6 +173,7 @@ margin:50px 0;
 <div class="car">
 <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=1200&q=60">
 <div class="car-body">
+<h3>Economy</h3>
 <p class="price">From $35 / day</p>
 </div>
 </div>
@@ -192,8 +191,8 @@ margin:50px 0;
 <div class="car-body">
 <h3>SUV</h3>
 <p class="price">From $65 / day</p>
-
-
+</div>
+</div>
 
 <div class="car">
 <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=1200&q=60">
