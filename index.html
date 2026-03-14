@@ -142,9 +142,6 @@ margin:50px 0;
 <h1>Rhine Rental – Car Rental in Jordan</h1>
 <p>Delivery available in Amman, Airport, Dead Sea and across Jordan.</p>
 </section>
-
-
-<div class="booking">
 <input type="text" placeholder="Pick-up Location">
 <input type="date">
 <input type="date">
@@ -155,9 +152,22 @@ margin:50px 0;
 <option>SUV</option>
 <option>Luxury</option>
 </select>
+<form class="booking" action="https://formspree.io/f/xpqylljd" method="POST">
 
-<button>Send Request</button>
-</div>
+  <input type="text" name="location" placeholder="Pick-up Location">
+
+  <input type="date" name="pickup_date">
+  <input type="date" name="return_date">
+
+  <select name="car_type">
+    <option>Economy</option>
+    <option>Sedan</option>
+    <option>SUV</option>
+    <option>Luxury</option>
+  </select>
+
+  <button type="submit">Send Request</button>
+</form>
 
 <section class="section" id="fleet">
 
